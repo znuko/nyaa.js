@@ -6,8 +6,8 @@ document.addEventListener("DOMContentLoaded", function(event) {
 
   // assignタグから変数格納
   let dic = {};
-  var tag_assign = new RegExp(/{%\s*assign\s+(?<key>\w+)\s*=\s*'?"?(?<value>.+?)'?"?\s*%}/g);
-  var match;
+  let tag_assign = new RegExp(/{%\s*assign\s+(?<key>\w+)\s*=\s*'?"?(?<value>.+?)'?"?\s*%}/g);
+  let match;
   while ((match = tag_assign.exec(target)) != null) {
     dic[match.groups.key] = match.groups.value;
   }
